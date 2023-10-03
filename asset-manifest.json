@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ProtsakPetro/goit-react-hw-02-feedbac.git/static/css/main.86b08deb.css",
-    "main.js": "/ProtsakPetro/goit-react-hw-02-feedbac.git/static/js/main.ee8f29c1.js",
-    "index.html": "/ProtsakPetro/goit-react-hw-02-feedbac.git/index.html",
-    "main.86b08deb.css.map": "/ProtsakPetro/goit-react-hw-02-feedbac.git/static/css/main.86b08deb.css.map",
-    "main.ee8f29c1.js.map": "/ProtsakPetro/goit-react-hw-02-feedbac.git/static/js/main.ee8f29c1.js.map"
+    "main.css": "/goit-react-hw-02-feedbac/static/css/main.86b08deb.css",
+    "main.js": "/goit-react-hw-02-feedbac/static/js/main.98d74034.js",
+    "index.html": "/goit-react-hw-02-feedbac/index.html",
+    "main.86b08deb.css.map": "/goit-react-hw-02-feedbac/static/css/main.86b08deb.css.map",
+    "main.98d74034.js.map": "/goit-react-hw-02-feedbac/static/js/main.98d74034.js.map"
   },
   "entrypoints": [
     "static/css/main.86b08deb.css",
-    "static/js/main.ee8f29c1.js"
+    "static/js/main.98d74034.js"
   ]
 }
