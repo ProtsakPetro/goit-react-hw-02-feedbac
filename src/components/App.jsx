@@ -33,6 +33,7 @@ class App extends Component {
 
   render() {
     const { LIKE, NEUTRAL, DISLIKE } = this.state;
+    const total = this.countTotalFeedback(); // Отримайте значення total один раз
     return (
       <Container>
         <Section title="SHARE YOUR EXPERIENCES">
@@ -42,12 +43,12 @@ class App extends Component {
           />
         </Section>
         <Section title="STATISTIC">
-          {this.countTotalFeedback() > 0 ? (
+          {total > 0 ? (
             <Statistics
               LIKE={LIKE}
               NEUTRAL={NEUTRAL}
               DISLIKE={DISLIKE}
-              total={this.countTotalFeedback()}
+              total={total} // Передавайте total як просте число
               positivePercentage={this.countPositiveFeedbackPercentage()}
             />
           ) : (
