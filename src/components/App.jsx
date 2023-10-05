@@ -7,33 +7,34 @@ import Notification from "./Notification/Notification";
 
 class App extends Component {
   state = {
-    LIKE: 0,
-    NEUTRAL: 0,
-    DISLIKE: 0
+    like: 0,
+    neutral: 0,
+    dislike: 0
   };
 
   countTotalFeedback = () => {
-    const { LIKE, NEUTRAL, DISLIKE } = this.state;
-    return LIKE + NEUTRAL + DISLIKE;
+    const { like, neutral, dislike } = this.state;
+    const feedbackValues = Object.values({ like, neutral, dislike });
+    return feedbackValues.reduce((total, value) => total + value, 0);
   };
 
   countPositiveFeedbackPercentage = () => {
-    const { LIKE } = this.state;
+    const { like } = this.state;
     const total = this.countTotalFeedback();
-    const percentage = total === 0 ? 0 : (LIKE / total) * 100;
+    const percentage = total === 0 ? 0 : (like / total) * 100;
     return Math.round(percentage) + "%";
   };
 
   handleFeedback = (e) => {
     const buttonName = e.target.textContent;
     this.setState((prevState) => ({
-      [buttonName]: prevState[buttonName] + 1
+      [buttonName.toLowerCase()]: prevState[buttonName.toLowerCase()] + 1
     }));
   };
 
   render() {
-    const { LIKE, NEUTRAL, DISLIKE } = this.state;
-    const total = this.countTotalFeedback(); // Отримайте значення total один раз
+    const { like, neutral, dislike } = this.state;
+    const total = this.countTotalFeedback(); 
     return (
       <Container>
         <Section title="SHARE YOUR EXPERIENCES">
@@ -45,10 +46,10 @@ class App extends Component {
         <Section title="STATISTIC">
           {total > 0 ? (
             <Statistics
-              LIKE={LIKE}
-              NEUTRAL={NEUTRAL}
-              DISLIKE={DISLIKE}
-              total={total} // Передавайте total як просте число
+              good={like}
+              neutral={neutral}
+              bad={dislike}
+              total={total} 
               positivePercentage={this.countPositiveFeedbackPercentage()}
             />
           ) : (

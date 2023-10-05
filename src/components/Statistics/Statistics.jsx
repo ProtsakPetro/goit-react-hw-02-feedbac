@@ -8,16 +8,16 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
           <p>GOOD: {good}</p>
         </StatisticsItem>
         <StatisticsItem>
-          <p>NEUTRAL: {neutral}</p>
+          <p>NATURAL: {neutral}</p>
         </StatisticsItem>
         <StatisticsItem>
           <p>BAD: {bad}</p>
         </StatisticsItem>
         <StatisticsItem>
-          <p>TOTAL: {total}</p> {/* Змініть на просте використання властивості total */}
+          <p>TOTAL: {total}</p> {/* Використовуйте total з малими літерами */}
         </StatisticsItem>
         <StatisticsItem>
-          <p>POSITIVE PERCENTAGE: {positivePercentage}</p> {/* Змініть на просте використання властивості positivePercentage */}
+          <p>Positive percentage: {positivePercentage}</p> {/* Використовуйте positivePercentage з малими літерами */}
         </StatisticsItem>
       </ul>
     </>
